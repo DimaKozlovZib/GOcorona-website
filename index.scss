@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #616161;
+    background-color: #FAFBFD;
+}
+h1,h2,h3,h4{
+    font-weight: bold;
+    color: #000;
+}
+[class*=__container]{
+    max-width: 1057px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+$redColor: #EC5863;
+$blueColor: #4285F4;
+$whiteTextColor: #FCFDFE;
+
