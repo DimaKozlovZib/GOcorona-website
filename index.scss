@@ -16,12 +16,17 @@ body{
     font-size: 12px;
     font-weight: 400;
     color: #616161;
-    background-color: #FAFBFD;
     height: 100%;
 }
 h1,h2,h3,h4{
     font-weight: bold;
     color: #000;
+}
+h2{
+    font-size: 40px;
+}
+.red{
+    color: $redColor;
 }
 .blue-text{
     color: $blueColor;
@@ -149,20 +154,18 @@ h1,h2,h3,h4{
         
     }
 }
-
-
-
-
 .careHealth{
+    background-color: #FAFBFD;
     overflow: hidden;
     &__container{
+        padding-bottom: 50px;
         padding-top: 240px;
         position: relative;
         display: flex;
         flex-direction: row-reverse;
         gap: 10px;
         &::before{
-            z-index: -11;
+            z-index: 0;
             margin-right: 240px;
             position: absolute;
             right: 0;
@@ -188,9 +191,6 @@ h1,h2,h3,h4{
     &__contant{
         min-width: 400px;
         flex:  1, 1 ,auto;
-        .contant__title{
-            font-size: 40px;
-        }
         .contant__text{
             max-width: 375px;
             margin-top: 15px;
@@ -241,9 +241,188 @@ h1,h2,h3,h4{
         }
     }
 }
+.Stay-safe{
+    padding-top: 20px;
+    padding-bottom: 60px;
+    &__container{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    &__contant{
+        min-width: 220px;
+        flex: 1 1 auto;
+        max-width: 400px;
+        margin: 0px auto;
+        &__title{
+            margin-bottom: 10px;
+        }
+        &__text{
+            margin-bottom: 17px;
+        }
+    }
+
+    .mobile-img{
+        margin-top: 70px;
+        img{
+            width: 100%;
+            max-width: 340px;
+        }
+    }
+    @media (max-width: 830px){
+        &__container{
+            display: block;
+        }
+        &__contant{
+            text-align: center;
+        }
+        .mobile-img{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            img{
+                position: relative;
+                right: 0;
+                left: 0;
+                margin: 0px auto;
+            }
+        }
+    }
+}
+.experts-section{
+    
+    padding: 105px 0px;
+    background-color: #FCFDFE;
+    &__container{
+
+    }
+    .numbers-block{
+        max-width: 650px;
+        margin: 0px auto;
+        margin-bottom: 70px;
+        position: relative;
+        z-index: 2;
+        &__body{
+            box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+            max-width: 510px; 
+            background-color: #fff;
+            padding: 28px 70px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            border-radius: 16px;
+            z-index: 2;
+            gap: 15px;
+            @media (max-width: 620px) {
+                &{
+                    padding: 28px 40px;
+                }
+            }
+        }
+        &__item{
+            text-align: center;
+            h3{
+                font-size: 35px;
+                color: $redColor;
+            }
+            h4{
+                
+            }
+        }
+        [class*="__decorate"]{
+            content: '';
+            border-radius: 30px;
+            position: absolute;
+            background-color: $redColor;
+            z-index: -1;
+        }
+        &__decorate-1{
+            width: 65px;
+            height: 65px;
+            left: -20px;
+            bottom: -20px;
+            border-radius: 16px !important;
+            transform: rotate(-30deg);
+        }
+        &__decorate-2{
+            width: 100px;
+            height: 100px;
+            left: 31%;
+            top: -40px;
+            transform: rotate(15deg);
+        }
+        &__decorate-3{
+            width: 127.47px;
+            height: 127.47px;
+            right: -40px;
+            top: 0;
+            bottom: 0;
+            transform: rotate(-30deg);
+        }
+        @media (max-width: 470px) {
+            &{
+                max-width: 80%;
+                &__decorate-2{
+                    left: 15%;
+                }
+            }
+            &__body{
+                row-gap: 25px;
+                flex-direction: column;
+
+                
+            }
+        }
+        
+    }
+    &__contant__text-block{
+        margin-top: 80px;
+        gap: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .text-block__contant{
+        &__text-block__title{
+            margin-bottom: 14px;
+        }
+        &__text-block__text{
+            margin-bottom: 24px;
+            max-width: 360px;
+        }
+        &__text-block__btn{
+
+        }
+
+    }
+    video{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+        border-radius: 8px;
+        max-width: 500px;
+        width: 100%;
+        max-height: 284px;
+    }
+}
+
+
+
+
 @media (max-width: 830px) {
+
     [class*=__container]{
         max-width: none;
+    }
+    .experts-section__contant__text-block{
+        text-align: center;
+        flex-direction: column;
+        .text-block__contant__text-block__text{
+            max-width: 100%;
+        }
+        video{
+            margin: 0px auto;
+            margin-top: 10px;
+        }
     }
     .header__download{
         padding-left: 20px;
@@ -271,19 +450,23 @@ h1,h2,h3,h4{
         .contant__text{
             max-width: 100%;
         }
-        .contant__title{
-            font-size: 30px;
-        }
+    }
+    h2{
+       font-size: 30px; 
     }
     .careHealth__watch-button{
         margin-top: 80px;
     }
 }
 @media (max-width: 490px) {
-        .careHealth__contant{
-            min-width: 100%;
-            .contant__title{
-                font-size: 20px;
-        }
+    .careHealth__contant{
+        min-width: 100%; 
+    }
+    h2{
+        font-size: 25px;
+    }
+    .experts-section .numbers-block__decorate-3{
+        bottom: 30%;
+        top: 10%;
     }
 }
