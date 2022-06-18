@@ -90,7 +90,13 @@ h2{
         background-color: $blueColor;
     }
 }
-
+[class*="__decorate"]{
+    content: '';
+    border-radius: 30px;
+    position: absolute;
+    background-color: $redColor;
+    z-index: -1;
+}
 
 
 
@@ -154,7 +160,7 @@ h2{
         
     }
 }
-.careHealth{
+.get-started{
     background-color: #FAFBFD;
     overflow: hidden;
     &__container{
@@ -231,10 +237,10 @@ h2{
         padding-left: 60px;
         
     }
-    .careHealth__container::before{
+    .get-started__container::before{
         margin-right: 197px;
     }
-    .careHealth-decoration{
+    .get-started-decoration{
         max-width: 450px;
         img{
             transform: translate(0px , -20px);
@@ -329,13 +335,6 @@ h2{
                 
             }
         }
-        [class*="__decorate"]{
-            content: '';
-            border-radius: 30px;
-            position: absolute;
-            background-color: $redColor;
-            z-index: -1;
-        }
         &__decorate-1{
             width: 65px;
             height: 65px;
@@ -404,6 +403,102 @@ h2{
         max-height: 284px;
     }
 }
+.Healthcare{
+    padding: 70px 0px;
+    &__container{
+
+    }
+    &__text-contant{
+        text-align: center;
+        &__text{
+            max-width: 600px;
+            margin: 0px auto;
+            margin-top: 15px;
+        }
+    }
+    &__cards{
+        gap: 15px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        &__item-wrapper{
+            position: relative;
+            max-width: 240px;
+            width: 100%;
+        }
+        &__item{
+            height: 100%;
+            box-sizing: border-box;
+            padding: 30px 25px 40px 25px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+            border-radius: 8px;
+            text-align: center;
+            .box-img{
+
+            }
+            img{
+                height: 72px;
+                max-width: 64px;
+                margin: 0px auto;
+            }
+            .card-contant{
+                margin-top: 50px;
+                h3{
+                    font-size: 16px;
+                }
+                &__text{
+                    margin-top: 5px;
+                    
+                }
+            }
+        }
+    }
+    .card__decorate-4{
+        width: 65.75px;
+        height: 65.75px;
+        transform: rotate(-30deg);
+        right: -20px;
+        top: -35px;
+        border-radius: 16px;
+    }
+    .card__decorate-3{
+        width: 127.47px;
+        height: 127.47px;
+        transform: rotate(-30deg);
+        bottom: -30px;
+        right: -74px;
+    }
+    .card__decorate-2{
+        height: 96px;
+        width: 96px;
+        right: -50px;
+        transform: rotate(15deg);
+        top: 30px;
+    }
+    .card__decorate-1{
+        height: 65px;
+        width: 65px;
+        border-radius: 16px;
+        transform: rotate(-30deg);
+        bottom: -30px;
+        left: -15px;
+    }
+    @media (max-width: 680px) {
+        &__cards{
+            display: block;
+            &__item-wrapper{
+                margin: 0px auto;
+                margin-top: 20px;
+            }
+        }
+        .card__decorate-4{
+            top: 50%;
+            right: 0;
+            left: -20px;
+        }
+    }
+}
 
 
 
@@ -433,18 +528,18 @@ h2{
             gap: 15px;
         }
     }
-    .careHealth__container::before{
+    .get-started__container::before{
         display: none;
     }
-    .careHealth__container{
+    .get-started__container{
         display: block;
         padding-top: 180px;
 
     }
-    .careHealth-decoration{
+    .get-started-decoration{
         margin: 0px auto;
     }
-    .careHealth__contant{
+    .get-started__contant{
         text-align: center;
         max-width: 100%;
         .contant__text{
@@ -454,12 +549,12 @@ h2{
     h2{
        font-size: 30px; 
     }
-    .careHealth__watch-button{
+    .get-started__watch-button{
         margin-top: 80px;
     }
 }
 @media (max-width: 490px) {
-    .careHealth__contant{
+    .get-started__contant{
         min-width: 100%; 
     }
     h2{
