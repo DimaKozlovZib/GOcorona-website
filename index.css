@@ -161,6 +161,13 @@ h2 {
 }
 
 .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -189,6 +196,93 @@ h2 {
 
 .header__download {
   padding-left: 121px;
+}
+
+.header .open-menu-btn {
+  display: none;
+  height: 15px;
+  width: 27px;
+  margin-left: auto;
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header .open-menu-btn span, .header .open-menu-btn::after {
+  bottom: 7px;
+  position: absolute;
+  content: '';
+  background-color: #000;
+  height: 2px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  width: 17px;
+}
+
+.header .open-menu-btn span {
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .open-menu-btn::after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .open-menu-btn.active span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .open-menu-btn.active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@media (max-width: 650px) {
+  .header .header__container {
+    position: relative;
+  }
+  .header .header__container .header__menu {
+    margin-right: 0px;
+  }
+  .header .header__container .header__logo {
+    font-size: 14px;
+  }
+  .header .header__container .button {
+    padding: 8px 17px;
+    font-size: 9px;
+  }
+  .header .header__container .menu-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+  }
+  .header .header__container .menu-list.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .open-menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .header__download {
+    padding-left: 9px;
+  }
 }
 
 .get-started {

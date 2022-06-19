@@ -136,6 +136,8 @@ h2{
         }
     }
     &__menu{
+        display: flex;
+        flex-direction: column-reverse;
         flex: 1 1 auto;
         margin-right: 40px;
         .menu-list{
@@ -159,7 +161,80 @@ h2{
         padding-left: 121px;
         
     }
+    .open-menu-btn{
+        display: none;
+        height: 15px;
+        width: 27px;
+        margin-left: auto;
+        position: relative;
+        border: none;
+        background: none;
+        cursor: pointer;
+        span , &::after{
+            bottom: 7px;
+            position: absolute;
+            content: '';
+            background-color: #000;
+            height: 2px;
+            transition: transform 0.2s ease;
+            width: 17px;
+        }
+        span{
+            right: 0;
+            transform: rotate(-45deg);
+        }
+        &::after{
+            left: 0;
+            transform: rotate(45deg);
+        }
+        &.active{
+            
+            span{
+                transform: rotate(45deg);
+            }
+            &::after{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    @media (max-width: 650px) {
+        .header__container{
+            position: relative;
+            .header__menu{
+                margin-right: 0px;
+            }
+            .header__logo{
+                font-size: 14px;
+            }
+            .button{
+                padding: 8px 17px;
+                font-size: 9px;
+            }
+            .menu-list{
+                justify-content: center;
+                position: absolute;
+                bottom: -40px;
+                width: 100%;
+                right: 0;
+                left: 0;
+                display: none;
+                &.active{
+                    display: flex;
+                }
+            }
+        }
+        .open-menu-btn{
+            display: block;
+        }
+    }
+    @media (max-width: 360px) {
+        .header__download{
+                padding-left: 9px;
+        }
+    }
 }
+
+
 .get-started{
     background-color: #FAFBFD;
     overflow: hidden;
