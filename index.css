@@ -560,6 +560,12 @@ h2 {
           justify-content: space-between;
 }
 
+.experts-section .text-block__contant {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
 .experts-section .text-block__contant__text-block__title {
   margin-bottom: 14px;
 }
@@ -569,14 +575,29 @@ h2 {
   max-width: 360px;
 }
 
-.experts-section video {
+.experts-section iframe {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
           box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
   border-radius: 8px;
-  max-width: 500px;
+  position: absolute;
   width: 100%;
-  max-height: 284px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  max-width: 521px;
+}
+
+.experts-section .video-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0 0 26% 0;
+  position: relative;
 }
 
 .Healthcare {
@@ -730,13 +751,19 @@ h2 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    row-gap: 30px;
   }
   .experts-section__contant__text-block .text-block__contant__text-block__text {
     max-width: 100%;
   }
-  .experts-section__contant__text-block video {
-    margin: 0px auto;
-    margin-top: 10px;
+  .experts-section__contant__text-block .video-box {
+    padding: 0 0 56.5% 0 !important;
+  }
+  .experts-section__contant__text-block iframe {
+    max-width: 100%;
   }
   .header__download {
     padding-left: 20px;
