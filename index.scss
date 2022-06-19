@@ -499,7 +499,23 @@ h2{
         }
     }
 }
-
+.footer{
+    padding-bottom: 40px;
+    &__container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 56px;
+        row-gap: 0px;
+        align-items: center;
+        .gp{
+            height: 55px;
+        }
+        .as{
+            height: 66px;
+        }
+    }
+}
 
 
 

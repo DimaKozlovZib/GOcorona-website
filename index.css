@@ -598,6 +598,34 @@ h2 {
   }
 }
 
+.footer {
+  padding-bottom: 40px;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 56px;
+  row-gap: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__container .gp {
+  height: 55px;
+}
+
+.footer__container .as {
+  height: 66px;
+}
+
 @media (max-width: 830px) {
   [class*=__container] {
     max-width: none;
